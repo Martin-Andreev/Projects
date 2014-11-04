@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/style.css"/>
+    <title>SoftGag-Project</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#list").hide();
+
+            $("#hiddenMenu").click(function () {
+                $("#list").show();
+            });
+
+            $("#close").click(function () {
+                $("#list").hide();
+            });
+        });
+    </script>
+
+</head>
+<body>
+<div class="clearfix">
+    <div class="wrapper">
+        <header>
+            <nav id="main-nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="imgs/logo.png" alt="SoftGag"/>
+                    </a>
+                </div>
+                <div class="nav-items">
+                    <ul id="menu">
+                        <li>
+                            <a href="index.html">HOME</a>
+                        </li>
+                        <li><a href="#">SOFTUNI TEAM</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="nakov.html">SVETLIN NAKOV</a>
+                                </li>
+                                <li>
+                                    <a href="deyan.html">DEYAN DACHEV</a>
+                                </li>
+                                <li>
+                                    <a href="tenchev.html">HRISTO TENCHEV</a>
+                                </li>
+                                <li>
+                                    <a href="angel.html">ANGEL GEORGIEV</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="active" href="#">ABOUT US</a>
+
+                        </li>
+                        <li>
+                            <a href="feedback.html">FEEDBACK</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hidden-menu">
+                    <img id="hiddenMenu" src="imgs/menu-icon.png" alt=""/>
+                </div>
+                <div id="list">
+                    <ul id="menu2">
+                        <li>
+                            <a href="index.html">HOME</a>
+                        </li>
+                        <li><a href="#">SOFTUNI TEAM</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="nakov.html">SVETLIN NAKOV</a>
+                                </li>
+                                <li>
+                                    <a href="deyan.html">DEYAN DACHEV</a>
+                                </li>
+                                <li>
+                                    <a href="tenchev.html">HRISTO TENCHEV</a>
+                                </li>
+                                <li>
+                                    <a href="angel.html">ANGEL GEORGIEV</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="about.html">ABOUT US</a>
+                        </li>
+                        <li>
+                            <a href="feedback.html">FEEDBACK</a>
+                        </li>
+                    </ul>
+                    <img id="close" src="imgs/shutdownbutton.png" alt="close"/>
+                </div>
+            </nav>
+        </header>
+        <section id="about">
+            <hr>
+            <div class="team">
+                <p>Meet Black Olive Team</p>
+            </div>
+
+            <div class="members-right">
+                <section class="innerSection">
+                    <header>
+                        <p>Martin Andreev</p>
+                    </header>
+                    <div class="hidden-img">
+                        <img src="imgs/members/martin.png" alt="picture of Martin">
+                    </div>
+                    <article>
+                        “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”
+                    </article>
+                    <div class="social">
+                        <a class="fb" href="https://www.facebook.com/profile.php?id=100000433237506">
+                            <img class="btnFacebook" src="imgs/buttons/facebook-button.png" alt="facebook btn!"/>
+                            <span class="social-text">Facebook</span>
+                        </a>
+                        <a class="github" href="https://github.com/agrecy">
+                            <img class="btnGitHub" src="imgs/buttons/gitHub-Button.png" alt="github btn"/>
+                            <span class="social-text">GitHub</span>
+                        </a>
+                        <a class="softUni" href="https://softuni.bg/users/profile/show/Andreev">
+                            <img class="btnSoftUni" src="imgs/buttons/softUni-button.png" alt="softUni btn!"/>
+                            <span class="social-text">SoftUni</span>
+                        </a>
+                    </div>
+                </section>
+
+                <aside>
+                    <img src="imgs/members/martin.png" alt="picture of Martin">
+                </aside>
+
+            </div>
+
+            <div class="members-left">
+                <section class="innerSection">
+                    <header>
+                        <p>Georgi Iliev</p>
+                    </header>
+                    <div class="hidden-img">
+                        <img src="imgs/members/georgi.jpg" alt="picture of Georgi">
+                    </div>
+                    <article>
+                        "Of all the things I've lost I miss my mind the most"
+                    </article>
+                    <div class="social">
+                        <a class="fb" href="https://www.facebook.com/georgi.iliev.12720">
+                            <img class="btnFacebook" src="imgs/buttons/facebook-button.png" alt="facebook btn!"/>
+                            <span class="social-text">Facebook</span>
+                        </a>
+                        <a class="github" href="https://github.com/benadaephondelat">
+                            <img class="btnGitHub" src="imgs/buttons/gitHub-Button.png" alt="github btn"/>
+                            <span class="social-text">GitHub</span>
+                        </a>
+                        <a class="softUni" href="https://softuni.bg/users/profile/show/quickben">
+                            <img class="btnSoftUni" src="imgs/buttons/softUni-button.png" alt="softUni btn!"/>
+                            <span class="social-text">SoftUni</span>
+                        </a>
+                    </div>
+                </section>
+                <aside>
+                    <img src="imgs/members/georgi.jpg" alt="picture...">
+                </aside>
+            </div>
+
+            <div class="members-right">
+                <section class="innerSection">
+                    <header>
+                        <p>Kristian Tsakov</p>
+                    </header>
+                    <div class="hidden-img">
+                        <img src="imgs/members/kristian.jpg" alt="picture of Kristian">
+                    </div>
+                    <article>
+                        "People who lack the clarity, courage, or determination to follow their own dreams will often find ways to discourage yours. Live your truth and don't EVER stop!"
+                    </article>
+                    <div class="social">
+                        <a class="fb" href="https://www.facebook.com/kristian.cakov">
+                            <img class="btnFacebook" src="imgs/buttons/facebook-button.png" alt="facebook btn!"/>
+                            <span class="social-text">Facebook</span>
+                        </a>
+                        <a class="github" href="https://github.com/kristiantsakov">
+                            <img class="btnGitHub" src="imgs/buttons/gitHub-Button.png" alt="github btn"/>
+                            <span class="social-text">GitHub</span>
+                        </a>
+                        <a class="softUni" href="https://softuni.bg/users/profile/show/kristian.tsakov">
+                            <img class="btnSoftUni" src="imgs/buttons/softUni-button.png" alt="softUni btn!"/>
+                            <span class="social-text">SoftUni</span>
+                        </a>
+                    </div>
+                </section>
+                <aside>
+                    <img src="imgs/members/kristian.jpg" alt="picture of Kristian">
+                </aside>
+            </div>
+
+            <div class="members-left">
+                <section class="innerSection">
+                    <header>
+                        <p>Vasil Jivkov</p>
+                    </header>
+                    <div class="hidden-img">
+                        <img src="imgs/members/vasil.jpg" alt="picture of Vasil">
+                    </div>
+                    <article>
+                        “Love what you do and do what you love. Don't listen to anyone else who tells you not to do it. You do what you want, what you love. Imagination should be the center of your life.”
+                    </article>
+                    <div class="social">
+                        <a class="fb" href="https://www.facebook.com/vasil.jivkov7">
+                            <img class="btnFacebook" src="imgs/buttons/facebook-button.png" alt="facebook btn!"/>
+                            <span class="social-text">Facebook</span>
+                        </a>
+                        <a class="github" href="https://github.com/VasilJivkov">
+                            <img class="btnGitHub" src="imgs/buttons/gitHub-Button.png" alt="github btn"/>
+                            <span class="social-text">GitHub</span>
+                        </a>
+                        <a class="softUni" href="https://softuni.bg/users/profile/show/vasil.jivkov">
+                            <img class="btnSoftUni" src="imgs/buttons/softUni-button.png" alt="softUni btn!"/>
+                            <span class="social-text">SoftUni</span>
+                        </a>
+                    </div>
+                </section>
+                <aside>
+                    <img src="imgs/members/vasil.jpg" alt="picture of Vasil">
+                </aside>
+
+            </div>
+        </section>
+    </div>
+    <footer id="buttom-footer">
+        <div class="copyright">
+            <p>Copyright© bullshit. Softuni PranK Website</p>
+            <!--CSS and HTML5 validation banners-->
+            <a href="http://css-validator.org/check/referer">
+                <img src="http://css-validator.org/images/vcss.png"
+                     alt="Valid CSS!"/>
+            </a>
+            <a href="http://validator.w3.org/check/">
+                <img src="http://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png"
+                     alt="Valid HTML5!">
+            </a>
+            <img src="imgs/worksHere.png" alt="Works here"/>
+            <!--End of CSS and HTML5 validation banners-->
+
+        </div>
+        <!-- End of div Wrapper-->
+    </footer>
+</div>
+<!-- End of div Clearfix-->
+</body>
+</html>

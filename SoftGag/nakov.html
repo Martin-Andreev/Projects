@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SoftGag-Project</title>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="scripts/playSound.js" type="text/javascript"></script>
+    <script src="scripts/votesCount.js" type="text/javascript"></script>
+    <script src="scripts/freezeframe.js" type="text/javascript"></script>
+    <script src="../ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        freezeframe_options = {}
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#list").hide();
+
+            $("#hiddenMenu").click(function () {
+                $("#list").show();
+            });
+
+            $("#close").click(function () {
+                $("#list").hide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <audio src="imgs/sounds/azis.wav" id="sound"></audio>
+    <audio src="imgs/sounds/angry.wav" id="angry"></audio>
+    <audio src="imgs/sounds/borat.wav" id="borat"></audio>
+    <audio src="imgs/sounds/clothes.wav" id="clothes"></audio>
+    <audio src="imgs/sounds/westside.wav" id="west"></audio>
+    <audio src="imgs/sounds/entertain.wav" id="gladiator"></audio>
+    <audio src="imgs/sounds/fuck.wav" id="fuck"></audio>
+    <audio src="imgs/sounds/time.wav" id="time"></audio>
+    <audio src="imgs/sounds/bond.wav" id="bond"></audio>
+    <audio src="imgs/sounds/hello.wav" id="hello"></audio>
+    <audio src="imgs/sounds/fire.wav" id="fire"></audio>
+    <audio src="imgs/sounds/rambo.wav" id="rambo"></audio>
+    <audio src="imgs/sounds/goal.wav" id="scores"></audio>
+    <audio src="imgs/sounds/machine.wav" id="machine"></audio>
+    <audio src="imgs/sounds/wolverine.wav" id="wolverine"></audio>
+    <audio src="imgs/sounds/sob.wav" id="jungle"></audio>
+    <audio src="imgs/sounds/soul.wav" id="kombat"></audio>
+    <audio src="imgs/sounds/password.wav" id="password"></audio>
+    <audio src="imgs/sounds/talk.wav" id="talk"></audio>
+
+    <div class="clearfix">
+    <div class="wrapper">
+    <header>
+        <nav id="main-nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imgs/logo.png" alt="SoftGag"/>
+                </a>
+            </div>
+            <div class="nav-items">
+                <ul id="menu">
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li><a href="#">SOFTUNI TEAM</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="nakov.html">SVETLIN NAKOV</a>
+                            </li>
+                            <li>
+                                <a href="deyan.html">DEYAN DACHEV</a>
+                            </li>
+                            <li>
+                                <a href="tenchev.html">HRISTO TENCHEV</a>
+                            </li>
+                            <li>
+                                <a href="angel.html">ANGEL GEORGIEV</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="about.html">ABOUT US</a>
+                    </li>
+                    <li>
+                        <a href="feedback.html">FEEDBACK</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hidden-menu">
+                <img id="hiddenMenu" src="imgs/menu-icon.png" alt=""/>
+            </div>
+            <div id="list">
+                <ul id="menu2">
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li><a href="#">SOFTUNI TEAM</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="nakov.html">SVETLIN NAKOV</a>
+                            </li>
+                            <li>
+                                <a href="deyan.html">DEYAN DACHEV</a>
+                            </li>
+                            <li>
+                                <a href="tenchev.html">HRISTO TENCHEV</a>
+                            </li>
+                            <li>
+                                <a href="angel.html">ANGEL GEORGIEV</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="about.html">ABOUT US</a>
+                    </li>
+                    <li>
+                        <a href="feedback.html">FEEDBACK</a>
+                    </li>
+                </ul>
+                <img id="close" src="imgs/shutdownbutton.png" alt="close"/>
+            </div>
+        </nav>
+    </header>
+    <section>
+
+    <div class="post">
+        <div class="image">
+            <img class="freezeframe example" src="imgs/nakov/azis-nakov.gif" alt="" onmouseover="play()" onmouseout="stopAzis()"/>
+        </div>
+        <!-- End of div Image-->
+        <div class="sidebar">
+            <span class="post-title">Nakov at Playboy</span>
+            <p>Rate and comment this GAG</p>
+            <div class="votes">
+                <div class="vote-text">
+                    <p>Likes <a id="clicks">0</a></p>
+                    <p>Dislikes <a id="dislikes">0</a></p>
+                </div>
+                <div class="vote-img">
+                    <img src="imgs/check.png" alt="" onClick="likesClick()">
+                    <img src="imgs/cross.png" alt="" onClick="dislikeClick()"/>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!--End if div sidebar-->
+    </div>
+    <!-- End of div Post-->
+
+
+
+    <div class="post">
+        <div class="image">
+            <img class="freezeframe example" src="imgs/nakov/bakov.gif" alt="" onmouseover="playBorat()" onmouseout="stopBorat()"/>
+        </div>
+        <!-- End of div Image-->
+        <div class="sidebar">
+            <span class="post-title">I like S*X , It's nice</span>
+            <p>Rate and comment this GAG</p>
+            <div class="votes">
+                <div class="vote-text">
+                    <p>Likes <a id="bakovLikes">0</a></p>
+
+                    <p>Dislikes <a id="bakovDislikes">0</a></p>
+                </div>
+                <div class="vote-img">
+                    <img src="imgs/check.png" alt="" onclick="bakovLikesClick()"/>
+                    <img src="imgs/cross.png" alt="" onclick="bakovDislikesClick()"/>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!--End if div sidebar-->
+    </div>
+    <!-- End of div Post-->
+
+
+    <div class="post">
+        <div class="image">
+            <img class="freezeframe example" src="imgs/nakov/NERMINATOR.gif" alt="" onmouseover="playClothes()" onmouseout="stopClothes()"/>
+        </div>
+        <!-- End of div Image-->
+        <div class="sidebar">
+            <span class="post-title">CLOTHES, NOW!!!</span>
+            <p>Rate and comment this GAG</p>
+            <div class="votes">
+                <div class="vote-text">
+                    <p>Likes <a id="svetlinatorLikes">0</a></p>
+                    <p>Dislikes <a id="svetlinatorDislikes">0</a></p>
+                </div>
+                <div class="vote-img">
+                    <img src="imgs/check.png" alt="" onclick="svetlinatorLikesClick()"/>
+                    <img src="imgs/cross.png" alt="" onclick="svetlinatorDislikesClick()"/>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!--End if div sidebar-->
+    </div>
+    <!-- End of div Post-->
+
+
+    <div class="post">
+        <div class="image">
+            <img class="freezeframe example" src="imgs/nakov/westside.gif" alt="" onmouseover="playWest()" onmouseout="stopWest()"/>
+        </div>
+        <!-- End of div Image-->
+        <div class="sidebar">
+            <span class="post-title">WESTSIDE!</span>
+            <p>Rate and comment this GAG</p>
+            <div class="votes">
+                <div class="vote-text">
+                    <p>Likes <a id="westsideLikes">0</a></p>
+                    <p>Dislikes <a id="westsideDislikes">0</a></p>
+                </div>
+                <div class="vote-img">
+                    <img src="imgs/check.png" alt="" onclick="westsideLikesClick()"/>
+                    <img src="imgs/cross.png" alt="" onclick="westsideDislikesClick()"/>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!--End if div sidebar-->
+    </div>
+    <!-- End of div Post-->
+
+    <div class="post">
+        <div class="image">
+            <img class="freezeframe example" src="imgs/nakov/naximus.gif" alt="" onmouseover="playGladiator()" onmouseout="stopGladiator()"/>
+        </div>
+        <!-- End of div Image-->
+        <div class="sidebar">
+            <span class="post-title">When in Rome...</span>
+            <p>Rate and comment this GAG</p>
+            <div class="votes">
+                <div class="vote-text">
+                    <p>Likes <a id="naximusLikes">0</a></p>
+                    <p>Dislikes <a id="naximusDislikes">0</a></p>
+                </div>
+                <div class="vote-img">
+                    <img src="imgs/check.png" alt="" onclick="naximusLikesClick()"/>
+                    <img src="imgs/cross.png" alt="" onclick="naximusDislikesClick()"/>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!--End if div sidebar-->
+    </div>
+    <!-- End of div Post-->
+
+
+    <div class="post">
+        <div class="image">
+            <img class="freezeframe example" src="imgs/nakov/censored.gif" alt="" onmouseover="playFuck()" onmouseout="stopFuck()"/>
+        </div>
+        <!-- End of div Image-->
+        <div class="sidebar">
+            <span class="post-title">When a BUG is found!</span>
+            <p>Rate and comment this GAG</p>
+            <div class="votes">
+                <div class="vote-text">
+                    <p>Likes <a id="censoredLikes">0</a></p>
+                    <p>Dislikes <a id="censoredDislikes">0</a></p>
+                </div>
+                <div class="vote-img">
+                    <img src="imgs/check.png" alt="" onclick="censoredLikesClick()"/>
+                    <img src="imgs/cross.png" alt="" onclick="censoredDislikesClick()"/>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!--End if div sidebar-->
+    </div>
+    <!-- End of div Post-->
+
+
+    <div class="post">
+        <div class="image">
+            <img class="freezeframe example" src="imgs/nakov/angrypr.gif" alt="" onmouseover="playPR()" onmouseout="stopPR()"/>
+        </div>
+        <!-- End of div Image-->
+        <div class="sidebar">
+            <span class="post-title">Friday at 19:59</span>
+            <p>Rate and comment this GAG</p>
+            <div class="votes">
+                <div class="vote-text">
+                    <p>Likes <a id="angryLikes">0</a></p>
+                    <p>Dislikes <a id="angryDislikes">0</a></p>
+                </div>
+                <div class="vote-img">
+                    <img src="imgs/check.png" alt="" onclick="angryLikesClick()"/>
+                    <img src="imgs/cross.png" alt="" onclick="angryDislikesClick()"/>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!--End if div sidebar-->
+    </div>
+    <!-- End of div Post-->
+
+
+    <div class="post">
+        <div class="image">
+            <img class="freezeframe example" src="imgs/nakov/bond.gif" alt="" onmouseover="playBond()" onmouseout="stopBond()"/>
+        </div>
+        <!-- End of div Image-->
+        <div class="sidebar">
+            <span class="post-title">Nakov's UK cousin</span>
+            <p>Rate and comment this GAG</p>
+            <div class="votes">
+                <div class="vote-text">
+                    <p>Likes <a id="bondLikes">0</a></p>
+                    <p>Dislikes <a id="bondDislikes">0</a></p>
+                </div>
+                <div class="vote-img">
+                    <img src="imgs/check.png" alt="" onclick="bondLikesClick()"/>
+                    <img src="imgs/cross.png" alt="" onclick="bondDislikesClick()"/>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!--End if div sidebar-->
+    </div>
+    <!-- End of div Post-->
+
+    <div class="post">
+        <div class="image">
+            <img class="freezeframe example" src="imgs/nakov/nakov-montana.gif" alt="" onmouseover="playHello()" onmouseout="stopHello()"/>
+        </div>
+        <!-- End of div Image-->
+        <div class="sidebar">
+            <span class="post-title">Nakov in America!</span>
+            <p>Rate and comment this GAG</p>
+            <div class="votes">
+                <div class="vote-text">
+                    <p>Likes <a id="montanaLikes">0</a></p>
+                    <p>Dislikes <a id="montanaDislikes">0</a></p>
+                </div>
+                <div class="vote-img">
+                    <img src="imgs/check.png" alt="" onclick="montanaLikesClick()"/>
+                    <img src="imgs/cross.png" alt="" onclick="montanaDislikesClick()"/>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!--End if div sidebar-->
+    </div>
+    <!-- End of div Post-->
+
+
+    <div class="post">
+        <div class="image">
+            <img class="freezeframe example" src="imgs/nakov/nakovaway.gif" alt="" onmouseover="playFire()" onmouseout="stopFire()"/>
+        </div>
+        <!-- End of div Image-->
+        <div class="sidebar">
+            <span class="post-title">Nakov discovers FIRE!</span>
+            <p>Rate and comment this GAG</p>
+            <div class="votes">
+                <div class="vote-text">
+                    <p>Likes <a id="castAwayLikes">0</a></p>
+                    <p>Dislikes <a id="castAwayDislikes">0</a></p>
+                </div>
+                <div class="vote-img">
+                    <img src="imgs/check.png" alt="" onclick="castAwayLikesClick()"/>
+                    <img src="imgs/cross.png" alt="" onclick="castAwayDislikesClick()"/>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!--End if div sidebar-->
+    </div>
+    <!-- End of div Post-->
+
+
+    <div class="post">
+        <div class="image">
+            <img class="freezeframe example" src="imgs/nakov/nambo.gif" alt="" onmouseover="playRambo()" onmouseout="stopRambo()"/>
+        </div>
+        <!-- End of div Image-->
+        <div class="sidebar">
+            <span class="post-title">NAMBO 3!</span>
+            <p>Rate and comment this GAG</p>
+            <div class="votes">
+                <div class="vote-text">
+                    <p>Likes <a id="ramboLikes">0</a></p>
+                    <p>Dislikes <a id="ramboDislikes">0</a></p>
+                </div>
+                <div class="vote-img">
+                    <img src="imgs/check.png" alt="" onclick="ramboLikesClick()"/>
+                    <img src="imgs/cross.png" alt="" onclick="ramboDislikesClick()"/>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!--End if div sidebar-->
+    </div>
+    <!-- End of div Post-->
+
+
+    <div class="post">
+        <div class="image">
+            <img class="freezeframe example" src="imgs/nakov/nakovscores.gif" alt="" onmouseover="playScores()" onmouseout="stopScores()"/>
+        </div>
+        <!-- End of div Image-->
+        <div class="sidebar">
+            <span class="post-title">IN MADRID!</span>
+            <p>Rate and comment this GAG</p>
+            <div class="votes">
+                <div class="vote-text">
+                    <p>Likes <a id="nakovScoresLikes">0</a></p>
+                    <p>Dislikes <a id="nakovScoresDislikes">0</a></p>
+                </div>
+                <div class="vote-img">
+                    <img src="imgs/check.png" alt="" onclick="nakovScoresLikesClick()"/>
+                    <img src="imgs/cross.png" alt="" onclick="nakovScoresDislikesClick()"/>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!--End if div sidebar-->
+    </div>
+    <!-- End of div Post-->
+    <div class="post">
+        <div class="image">
+            <img class="freezeframe example" src="imgs/nakov/nakov-machine.gif" alt="" onmouseover="playMachine()" onmouseout="stopMachine()"/>
+        </div>
+        <!-- End of div Image-->
+        <div class="sidebar">
+            <span class="post-title">NERMINATOR 2!</span>
+            <p>Rate and comment this GAG</p>
+            <div class="votes">
+                <div class="vote-text">
+                    <p>Likes <a id="machineLikes">0</a></p>
+                    <p>Dislikes <a id="machineDislikes">0</a></p>
+                </div>
+                <div class="vote-img">
+                    <img src="imgs/check.png" alt="" onclick="machineLikesClick()"/>
+                    <img src="imgs/cross.png" alt="" onclick="machineDislikesClick()"/>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!--End if div sidebar-->
+    </div>
+    <!-- End of div Post-->
+
+
+    <div class="post">
+        <div class="image">
+            <img class="freezeframe example" src="imgs/nakov/nakov-wolverine.gif" alt="" onmouseover="playWolverine()" onmouseout="stopWolverine()"/>
+        </div>
+        <!-- End of div Image-->
+        <div class="sidebar">
+            <span class="post-title">NAKOV-MEN!</span>
+            <p>Rate and comment this GAG</p>
+            <div class="votes">
+                <div class="vote-text">
+                    <p>Likes <a id="wolverineLikes">0</a></p>
+                    <p>Dislikes <a id="wolverineDislikes">0</a></p>
+                </div>
+                <div class="vote-img">
+                    <img src="imgs/check.png" alt="" onclick="wolverineLikesClick()"/>
+                    <img src="imgs/cross.png" alt="" onclick="wolverineDislikesClick()"/>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!--End if div sidebar-->
+    </div>
+    <!-- End of div Post-->
+
+    <div class="post">
+        <div class="image">
+            <img class="freezeframe example" src="imgs/nakov/nakov-jungle.gif" alt="" onmouseover="playJungle()" onmouseout="stopJungle()"/>
+        </div>
+        <!-- End of div Image-->
+        <div class="sidebar">
+            <span class="post-title">Don't mess with him!</span>
+            <p>Rate and comment this GAG</p>
+            <div class="votes">
+                <div class="vote-text">
+                    <p>Likes <a id="jungleLikes">0</a></p>
+                    <p>Dislikes <a id="jungleDislikes">0</a></p>
+                </div>
+                <div class="vote-img">
+                    <img src="imgs/check.png" alt="" onclick="jungleLikesClick()"/>
+                    <img src="imgs/cross.png" alt="" onclick="jungleDislikesClick()"/>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!--End if div sidebar-->
+    </div>
+    <!-- End of div Post-->
+
+    <div class="post">
+        <div class="image">
+            <img class="freezeframe example" src="imgs/nakov/nakov-kombat.gif" alt="" onmouseover="playKombat()" onmouseout="stopKombat()"/>
+        </div>
+        <!-- End of div Image-->
+        <div class="sidebar">
+            <span class="post-title">NAKOV KOMBAT!</span>
+            <p>Rate and comment this GAG</p>
+            <div class="votes">
+                <div class="vote-text">
+                    <p>Likes <a id="kombatLikes">0</a></p>
+                    <p>Dislikes <a id="kombatDislikes">0</a></p>
+                </div>
+                <div class="vote-img">
+                    <img src="imgs/check.png" alt="" onclick="kombatLikesClick()"/>
+                    <img src="imgs/cross.png" alt="" onclick="kombatDislikesClick()"/>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!--End if div sidebar-->
+    </div>
+    <!-- End of div Post-->
+
+    <div class="post">
+        <div class="image">
+            <img class="freezeframe example" src="imgs/nakov/nakov-password.gif" alt="" onmouseover="playPassword()" onmouseout="stopPassword()"/>
+        </div>
+        <!-- End of div Image-->
+        <div class="sidebar">
+            <span class="post-title">Nakov's Password!</span>
+            <p>Rate and comment this GAG</p>
+            <div class="votes">
+                <div class="vote-text">
+                    <p>Likes <a id="passwordLikes">0</a></p>
+                    <p>Dislikes <a id="passwordDislikes">0</a></p>
+                </div>
+                <div class="vote-img">
+                    <img src="imgs/check.png" alt="" onclick="passwordLikesClick()"/>
+                    <img src="imgs/cross.png" alt="" onclick="passwordDislikesClick()"/>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!--End if div sidebar-->
+    </div>
+    <!-- End of div Post-->
+
+    <div class="post">
+        <div class="image">
+            <img class="freezeframe example" src="imgs/nakov/nakov-talking.gif" alt="" onmouseover="playTalk()" onmouseout="stopTalk()"/>
+        </div>
+        <!-- End of div Image-->
+        <div class="sidebar">
+            <span class="post-title">Talking to me?!</span>
+            <p>Rate and comment this GAG</p>
+            <div class="votes">
+                <div class="vote-text">
+                    <p>Likes <a id="talkLikes">0</a></p>
+                    <p>Dislikes <a id="talkDislikes">0</a></p>
+                </div>
+                <div class="vote-img">
+                    <img src="imgs/check.png" alt="" onclick="talkLikesClick()"/>
+                    <img src="imgs/cross.png" alt="" onclick="talkDislikesClick()"/>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!--End if div sidebar-->
+    </div>
+    <!-- End of div Post-->
+
+    <div class="post">
+        <div class="image">
+            <img class="freezeframe example" id="hulk" src="imgs/nakov/hakov.gif" alt="" onmouseover="playAngry()" onmouseout="stopAngry()"/>
+        </div>
+        <!-- End of div Image-->
+        <div class="sidebar">
+            <span class="post-title">Don't make Nakov angry</span>
+            <p>Rate and comment this GAG</p>
+            <div class="votes">
+                <div class="vote-text">
+                    <p>Likes <a id="hulkLikes">0</a></p>
+                    <p>Dislikes <a id="hulkDislikes">0</a></p>
+                </div>
+                <div class="vote-img">
+                    <img src="imgs/check.png" alt="" onclick="hulkLikesClick()">
+                    <img src="imgs/cross.png" alt="" onclick="hulkDislikesClick()"/>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!--End if div sidebar-->
+    </div>
+    <!-- End of div Post-->
+
+
+
+
+    </section>
+    </div>
+    <footer id="buttom-footer">
+        <div class="copyright">
+            <p>Copyright© bullshit. Softuni PranK Website</p>
+            <!--CSS and HTML5 validation banners-->
+            <a href="http://css-validator.org/check/referer">
+                <img src="http://css-validator.org/images/vcss.png"
+                     alt="Valid CSS!"/>
+            </a>
+            <a href="http://validator.w3.org/check/">
+                <img src="http://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png" alt="Valid HTML5!">
+            </a>
+            <img src="imgs/worksHere.png" alt="Works here"/>
+            <!--End of CSS and HTML5 validation banners-->
+        </div>
+        <!-- End of div Wrapper-->
+    </footer>
+    </div>
+    <!-- End of div Clearfix-->
+</body>
+</html>

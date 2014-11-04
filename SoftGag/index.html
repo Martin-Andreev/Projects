@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/style.css"/>
+    <title>SoftGag-Project</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#list").hide();
+
+            $("#hiddenMenu").click(function () {
+                $("#list").show();
+            });
+
+            $("#close").click(function () {
+                $("#list").hide();
+            });
+        });
+    </script>
+    <script type="text/javascript" src="scripts/votesCount.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="clearfix">
+        <div class="wrapper">
+            <header>
+                <nav id="main-nav">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="imgs/logo.png" alt="SoftGag"/>
+                        </a>
+                    </div>
+                    <div class="nav-items">
+                        <ul id="menu">
+                            <li>
+                                <a href="index.html">HOME</a>
+                            </li>
+                            <li><a href="#">SOFTUNI TEAM</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="nakov.html">SVETLIN NAKOV</a>
+                                    </li>
+                                    <li>
+                                        <a href="deyan.html">DEYAN DACHEV</a>
+                                    </li>
+                                    <li>
+                                        <a href="tenchev.html">HRISTO TENCHEV</a>
+                                    </li>
+                                    <li>
+                                        <a href="angel.html">ANGEL GEORGIEV</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="about.html">ABOUT US</a>
+                            </li>
+                            <li>
+                                <a href="feedback.html">FEEDBACK</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hidden-menu">
+                        <img id="hiddenMenu" src="imgs/menu-icon.png" alt=""/>
+                    </div>
+                    <div id="list">
+                        <ul id="menu2">
+                            <li>
+                                <a href="index.html">HOME</a>
+                            </li>
+                            <li><a href="#">SOFTUNI TEAM</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="nakov.html">SVETLIN NAKOV</a>
+                                    </li>
+                                    <li>
+                                        <a href="deyan.html">DEYAN DACHEV</a>
+                                    </li>
+                                    <li>
+                                        <a href="tenchev.html">HRISTO TENCHEV</a>
+                                    </li>
+                                    <li>
+                                        <a href="angel.html">ANGEL GEORGIEV</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="about.html">ABOUT US</a>
+                            </li>
+                            <li>
+                                <a href="feedback.html">FEEDBACK</a>
+                            </li>
+                        </ul>
+                        <img id="close" src="imgs/shutdownbutton.png" alt="close"/>
+                    </div>
+                </nav>
+            </header>
+            <section>
+                <div class="post">
+                    <div class="image">
+                        <img src="imgs/nakov%20joker.jpg" alt="IMAGE"/>
+                    </div>
+                    <!-- End of div Image-->
+                    <div class="sidebar">
+                        <span class="post-title">Why so serious students...?</span>
+
+                        <p>Rate and comment this GAG</p>
+
+                        <div class="votes">
+
+                            <div class="vote-text">
+                                <p>Likes <a id="pic1Likes">0</a></p>
+
+                                <p>Dislikes <a id="pic1Dislikes">0</a></p>
+                            </div>
+
+                            <div class="vote-img">
+                                <img src="imgs/check.png" alt="" onClick="pic1LikesClick()">
+                                <img src="imgs/cross.png" alt="" onClick="pic1DislikesClick()"/>
+                            </div>
+                        </div>
+
+                        <div class="comment">
+                            <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <!-- End of div sidebar-->
+                </div>
+                <!-- End of div Post-->
+                <!--next GAG-->
+                <div class="post">
+                    <div class="image">
+                        <img src="imgs/bullshit.jpg" alt="IMAGE"/>
+                    </div>
+                    <!-- End of div Image-->
+                    <div class="sidebar">
+                        <span class="post-title">When my windows find an error....</span>
+
+                        <p>Rate and comment this GAG</p>
+
+                        <div class="votes">
+
+                            <div class="vote-text">
+                                <p>Likes <a id="pic2Likes">0</a></p>
+
+                                <p>Dislikes <a id="pic2Dislikes">0</a></p>
+                            </div>
+
+                            <div class="vote-img">
+                                <img src="imgs/check.png" alt="" onClick="pic2LikesClick()">
+                                <img src="imgs/cross.png" alt="" onClick="pic2DislikesClick()"/>
+                            </div>
+                        </div>
+
+                        <div class="comment">
+                            <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <!-- End of div sidebar-->
+                </div>
+                <!-- End of div Post-->
+
+                <!--next GAG-->
+                <div class="post">
+                    <div class="image">
+                        <img src="imgs/fatmom.jpg" alt="IMAGE"/>
+                    </div>
+                    <!-- End of div Image-->
+                    <div class="sidebar">
+                        <span class="post-title">This is a really big momma ..</span>
+
+                        <p>Rate and comment this GAG</p>
+
+                        <div class="votes">
+
+                            <div class="vote-text">
+                                <p>Likes <a id="pic3Likes">0</a></p>
+
+                                <p>Dislikes <a id="pic3Dislikes">0</a></p>
+                            </div>
+
+                            <div class="vote-img">
+                                <img src="imgs/check.png" alt="" onClick="pic3LikesClick()">
+                                <img src="imgs/cross.png" alt="" onClick="pic3DislikesClick()"/>
+                            </div>
+                        </div>
+
+                        <div class="comment">
+                            <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <!-- End of div sidebar-->
+                </div>
+                <!-- End of div Post-->
+
+                <!--next GAG-->
+                <div class="post">
+                    <div class="image">
+                        <img src="imgs/cookie.jpg" alt="IMAGE"/>
+                    </div>
+                    <!-- End of div Image-->
+                    <div class="sidebar">
+                        <span class="post-title">Proffesional cookie stealer</span>
+
+                        <p>Rate and comment this GAG</p>
+
+                        <div class="votes">
+
+                            <div class="vote-text">
+                                <p>Likes <a id="pic4Likes">0</a></p>
+
+                                <p>Dislikes <a id="pic4Dislikes">0</a></p>
+                            </div>
+
+                            <div class="vote-img">
+                                <img src="imgs/check.png" alt="" onClick="pic4LikesClick()">
+                                <img src="imgs/cross.png" alt="" onClick="pic4DislikesClick()"/>
+                            </div>
+                        </div>
+
+                        <div class="comment">
+                            <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <!-- End of div sidebar-->
+                </div>
+                <!-- End of div Post-->
+
+                <!--next GAG-->
+                <div class="post">
+                    <div class="image">
+                        <img src="imgs/overflow.png" alt="IMAGE"/>
+                    </div>
+                    <!-- End of div Image-->
+                    <div class="sidebar">
+                        <span class="post-title">Try to keep it</span>
+
+                        <p>Rate and comment this GAG</p>
+
+                        <div class="votes">
+
+                            <div class="vote-text">
+                                <p>Likes <a id="pic5Likes">0</a></p>
+
+                                <p>Dislikes <a id="pic5Dislikes">0</a></p>
+                            </div>
+
+                            <div class="vote-img">
+                                <img src="imgs/check.png" alt="" onClick="pic5LikesClick()">
+                                <img src="imgs/cross.png" alt="" onClick="pic5DislikesClick()"/>
+                            </div>
+                        </div>
+
+                        <div class="comment">
+                            <textarea name="comment-gag" class="comment-gag" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <!-- End of div sidebar-->
+                </div>
+                <!-- End of div Post-->
+
+            </section>
+        </div>
+        <footer id="buttom-footer">
+            <div class="copyright">
+                <p>Copyright© bullshit. Softuni PranK Website</p>
+                <!--CSS and HTML5 validation banners-->
+                <a href="http://css-validator.org/check/referer">
+                    <img src="http://css-validator.org/images/vcss.png"
+                         alt="Valid CSS!"/>
+                </a>
+                <a href="http://validator.w3.org/check/">
+                    <img src="http://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png"
+                         alt="Valid HTML5!">
+                </a>
+                <img src="imgs/worksHere.png" alt="Works here"/>
+                <!--End of CSS and HTML5 validation banners-->
+
+            </div>
+            <!-- End of div Wrapper-->
+        </footer>
+    </div>
+    <!-- End of div Clearfix-->
+</div>
+<!-- End of div Container-->
+</body>
+</html>
