@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99672685-A79A-47AA-97A5-222C8622946D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RPG</RootNamespace>
+    <AssemblyName>RPG</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Windows\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Windows\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Game1.cs" />
+    <Compile Include="GameLogic\Core\CollisionHandler.cs" />
+    <Compile Include="GameLogic\Core\CollisionResult.cs" />
+    <Compile Include="GameLogic\Core\Factory\EnemyFactory.cs" />
+    <Compile Include="GameLogic\Core\Factory\EnemyType.cs" />
+    <Compile Include="GameLogic\Core\Engine.cs" />
+    <Compile Include="GameLogic\Core\XNARectangleExtention.cs" />
+    <Compile Include="GameLogic\Core\Factory\ItemFactory.cs" />
+    <Compile Include="GameLogic\Enums\ItemType.cs" />
+    <Compile Include="GameLogic\Exceptions\NegativeStatsException.cs" />
+    <Compile Include="GameLogic\Interface\IEnemy.cs" />
+    <Compile Include="GameLogic\Interface\IFight.cs" />
+    <Compile Include="GameLogic\Interface\IItem.cs" />
+    <Compile Include="GameLogic\Interface\IPlayer.cs" />
+    <Compile Include="GameLogic\Interface\IRoam.cs" />
+    <Compile Include="GameLogic\Interface\IMove.cs" />
+    <Compile Include="GameLogic\Interface\ITimeout.cs" />
+    <Compile Include="GameLogic\Core\Battle\Battle.cs" />
+    <Compile Include="GameLogic\Models\Spells\Base\SelftCastSkill.cs" />
+    <Compile Include="GameLogic\Models\Spells\Base\Skill.cs" />
+    <Compile Include="GameLogic\Models\Spells\Base\TargetedSkill.cs" />
+    <Compile Include="GameLogic\Models\Spells\BasicAttack.cs" />
+    <Compile Include="GameLogic\Models\Spells\Fireball.cs" />
+    <Compile Include="GameLogic\Models\Spells\Heal.cs" />
+    <Compile Include="GameLogic\Models\Stats\Fire.cs" />
+    <Compile Include="Graphics\AbstractGameState.cs" />
+    <Compile Include="Graphics\BattleScreen.cs" />
+    <Compile Include="GameLogic\Models\Effects\Base\Effects.cs" />
+    <Compile Include="GameLogic\Models\Effects\Base\EffectType.cs" />
+    <Compile Include="GameLogic\Models\Effects\Burning.cs" />
+    <Compile Include="GameLogic\Models\Effects\Healing.cs" />
+    <Compile Include="Graphics\CustomShapes\CircleDrawer.cs" />
+    <Compile Include="GameLogic\Enums\GameState.cs" />
+    <Compile Include="GameLogic\Models\Inventory\Base\Inventory.cs" />
+    <Compile Include="GameLogic\Models\PickUps\Base\PickUp.cs" />
+    <Compile Include="GameLogic\Models\PickUps\Bonus.cs" />
+    <Compile Include="GameLogic\Models\PickUps\Item.cs" />
+    <Compile Include="Graphics\GameStates\BattleScreenState.cs" />
+    <Compile Include="Graphics\GameStates\GamePlayState.cs" />
+    <Compile Include="Graphics\GameStates\LoseGameState.cs" />
+    <Compile Include="Graphics\GameStates\MainMenuState.cs" />
+    <Compile Include="Graphics\GameStates\WinGameState.cs" />
+    <Compile Include="Graphics\Lose.cs" />
+    <Compile Include="Graphics\MainMenu.cs" />
+    <Compile Include="Graphics\Map\Camera.cs" />
+    <Compile Include="Graphics\Map\Map.cs" />
+    <Compile Include="GameLogic\Models\Characters\Base\Character.cs" />
+    <Compile Include="GameLogic\Models\Characters\Enemy.cs" />
+    <Compile Include="GameLogic\Models\Characters\Player.cs" />
+    <Compile Include="GameLogic\Models\Stats\Attack.cs" />
+    <Compile Include="GameLogic\Models\Stats\Base\Stat.cs" />
+    <Compile Include="GameLogic\Models\Stats\Base\StatType.cs" />
+    <Compile Include="GameLogic\Models\Stats\Defense.cs" />
+    <Compile Include="GameLogic\Models\Stats\Elemental.cs" />
+    <Compile Include="GameLogic\Models\Stats\Health.cs" />
+    <Compile Include="GameLogic\GameObject.cs" />
+    <Compile Include="Graphics\Animation.cs" />
+    <Compile Include="Graphics\CustomShapes\Circle.cs" />
+    <Compile Include="Graphics\GUIElement.cs" />
+    <Compile Include="Graphics\Map\MapCell.cs" />
+    <Compile Include="Graphics\Map\MapRow.cs" />
+    <Compile Include="Graphics\Map\Tile.cs" />
+    <Compile Include="Graphics\Map\TileMap.cs" />
+    <Compile Include="Graphics\TextDrawer.cs" />
+    <Compile Include="GameMain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Levels\level1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Levels\level2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Battle\background.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Battle\button1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Battle\button2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Battle\left.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Battle\futureui1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Battle\right.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Battle\select.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Battle\flee.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\background.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\continue_disabled.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\continue_hovered.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\continue_plain.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\continue_pressed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\credits_disabled.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\credits_hovered.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\credits_plain.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\credits_pressed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\exit_disabled.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\exit_hovered.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\exit_plain.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\exit_pressed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\load_game_disabled.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\load_game_hovered.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\load_game_plain.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\load_game_pressed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\main_menu_background_under_buttons.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\new_game_disabled.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\new_game_hovered.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\new_game_plain.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\new_game_pressed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\options_disabled.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\options_hovered.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\options_plain.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Overlays\Menu\options_pressed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Tiles\tileset.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Tiles\wood_tileset_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Levels\map.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Fonts\Arial.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\Overlays\Battle\enemy2_hurt.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Overlays\Battle\enemy2_hurtmore.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Overlays\Battle\enemy2_start.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Overlays\Battle\enemy3_hurt.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Overlays\Battle\enemy3_hurtmore.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Overlays\Battle\enemy3_start.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Overlays\Battle\enemy_dead.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Overlays\Battle\enemy_hurt.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Overlays\Battle\enemy_hurtmore.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Overlays\Battle\enemy_start.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Overlays\Battle\message.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Overlays\Battle\player_dead.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Overlays\Battle\player_happy.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Overlays\Battle\player_hurt.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Overlays\Battle\player_hurtmore.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Overlays\Battle\player_start.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Overlays\Menu\dead.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sprites\Monster\enemy1.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sprites\Monster\enemy2.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sprites\Monster\enemy3.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Sprites\Player\character.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
