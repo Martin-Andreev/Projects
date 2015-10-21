@@ -1,0 +1,18 @@
+﻿@using Twitter.Web.Areas.Tweets.Models.ViewModels
+@model IEnumerable<TweetViewModel>
+
+@if (HttpContext.Current.User != null && HttpContext.Current.User.Identity.IsAuthenticated)
+{
+    if (Model.Any())
+    {
+        @Html.DisplayFor(m => m)
+    }
+    else
+    {
+        <div class="main-container panel panel-default col-md-6 col-lg-offset-3 tweet">
+            <div class="panel-heading tweet-heading">
+                <p>No tweets to display :(</p>
+            </div>
+        </div>
+    }
+}

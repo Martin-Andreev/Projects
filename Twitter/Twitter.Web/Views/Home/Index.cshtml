@@ -1,0 +1,30 @@
+﻿@using Twitter.Web.Areas.Tweets.Models.ViewModels
+@model IEnumerable<TweetViewModel>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@if (HttpContext.Current.User != null && HttpContext.Current.User.Identity.IsAuthenticated)
+{
+    if (Model.Any())
+    {
+        <div class="col-md-6 col-lg-offset-3 tweet main-container">
+            @Html.DisplayFor(m => m)
+        </div>
+    }
+    else
+    {
+        <div class="main-container panel panel-default col-md-6 col-lg-offset-3 tweet">
+            <div class="panel-heading tweet-heading">
+                <p>No tweets to display :(</p>
+            </div>
+        </div>
+    }
+    <aside class="col-lg-3">
+        @{
+            Html.RenderAction("GetFollowingUsersSuggestions", "Users", new { area = "Users" });
+        }
+    </aside>
+
+}

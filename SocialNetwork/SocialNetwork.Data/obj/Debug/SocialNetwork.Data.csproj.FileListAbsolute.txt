@@ -1,0 +1,16 @@
+C:\Users\Andreev\Documents\GitHub\Projects\SocialNetwork\SocialNetwork.Data\bin\Debug\SocialNetwork.Data.dll.config
+C:\Users\Andreev\Documents\GitHub\Projects\SocialNetwork\SocialNetwork.Data\bin\Debug\SocialNetwork.Data.dll
+C:\Users\Andreev\Documents\GitHub\Projects\SocialNetwork\SocialNetwork.Data\bin\Debug\SocialNetwork.Data.pdb
+C:\Users\Andreev\Documents\GitHub\Projects\SocialNetwork\SocialNetwork.Data\bin\Debug\EntityFramework.dll
+C:\Users\Andreev\Documents\GitHub\Projects\SocialNetwork\SocialNetwork.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Andreev\Documents\GitHub\Projects\SocialNetwork\SocialNetwork.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Andreev\Documents\GitHub\Projects\SocialNetwork\SocialNetwork.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Andreev\Documents\GitHub\Projects\SocialNetwork\SocialNetwork.Data\bin\Debug\SocialNetwork.Models.dll
+C:\Users\Andreev\Documents\GitHub\Projects\SocialNetwork\SocialNetwork.Data\bin\Debug\SocialNetwork.Models.pdb
+C:\Users\Andreev\Documents\GitHub\Projects\SocialNetwork\SocialNetwork.Data\bin\Debug\EntityFramework.xml
+C:\Users\Andreev\Documents\GitHub\Projects\SocialNetwork\SocialNetwork.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Andreev\Documents\GitHub\Projects\SocialNetwork\SocialNetwork.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Andreev\Documents\GitHub\Projects\SocialNetwork\SocialNetwork.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Andreev\Documents\GitHub\Projects\SocialNetwork\SocialNetwork.Data\obj\Debug\SocialNetwork.Data.csprojResolveAssemblyReference.cache
+C:\Users\Andreev\Documents\GitHub\Projects\SocialNetwork\SocialNetwork.Data\obj\Debug\SocialNetwork.Data.dll
+C:\Users\Andreev\Documents\GitHub\Projects\SocialNetwork\SocialNetwork.Data\obj\Debug\SocialNetwork.Data.pdb

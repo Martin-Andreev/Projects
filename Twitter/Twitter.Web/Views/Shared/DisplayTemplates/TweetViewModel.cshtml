@@ -1,0 +1,41 @@
+﻿@model Twitter.Web.Areas.Tweets.Models.ViewModels.TweetViewModel
+
+<div class="panel panel-default">
+    <div class="panel-heading tweet-heading">
+        @Html.ActionLink(@Model.Author.Name, "Show", "Profile", new {area = "Users", username = @Model.Author.Username}, new {@class = "emphasized-text"})
+        <span class="small-text">@@@Model.Author.Username </span>
+        <time>- @Model.PostedOn</time>
+    </div>
+    <div class="panel-body">@Model.Content</div>
+    <div class="panel-footer text-align-left tweet-footer">
+        <a href="#" class="btn">
+            <div class="options background-grey reply-icon">
+                <span class="glyphicon glyphicon-share-alt"></span>
+                @if (@Model.RepliesCount != 0)
+                {
+                    <span class="options-number">@Model.RepliesCount</span>
+                }
+            </div>
+        </a>
+        <a href="#" class="btn background-grey retweet-icon">
+            <span class="glyphicon glyphicon-retweet"></span>
+            @if (@Model.RetweetsCount != 0)
+            {
+                <span class="options-number">@Model.RetweetsCount</span>
+            }
+        </a>
+        <a href="#" class="btn background-grey favorite-icon">
+            <span class="glyphicon glyphicon-star"></span>
+            @if (@Model.FavouritesCount != 0)
+            {
+                <span class="options-number">@Model.FavouritesCount</span>
+            }
+        </a>
+        <a href="#" class="btn background-grey copy-icon">
+            <span class="glyphicon glyphicon-duplicate"></span>
+        </a>
+        <a href="#" class="btn background-grey report-icon">
+            <span class="glyphicon glyphicon-exclamation-sign"></span>
+        </a>
+    </div>
+</div>

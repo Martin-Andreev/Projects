@@ -1,0 +1,421 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background: #F5F8FA;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.image-icon {
+    width: 28px;
+    height: 50px;
+    margin-top: 5%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.border-left-transperant{
+border-left: 0;
+}
+
+.left-distance-sm {
+    margin-left: 2px !important;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.border-radius-md {
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.main-container {
+    /*margin-top: 3%;*/
+    margin-bottom: -2%
+}
+
+a {
+    text-decoration: none;
+}
+
+.header-custom {
+    margin-top: -15px;
+}
+
+
+ /*.right-inner-addon {
+    position: relative;
+}
+
+ .right-inner-addon input {
+    padding-right: 30px;    
+}
+
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 10px 12px;
+    pointer-events: none;
+}*/
+
+.search-box-section {
+    width: 21%;
+}
+
+.search-box {
+    margin-top: 7%
+}
+
+#button-search {
+    position: absolute;
+    right: 20px;
+    margin-top: 5.5%;
+    background: transparent;
+    border: none;
+}
+
+
+
+
+
+
+
+
+.background-grey {
+    color: grey;
+}
+
+.reply-icon:hover {
+    color: #0087C5;
+}
+
+.retweet-icon:hover {
+    color: #67c12a;
+}
+
+.favorite-icon:hover {
+    color: #FFAC33;
+}
+
+.copy-icon:hover {
+    color: #6161E0;
+}
+
+.report-icon:hover {
+    color: #EA4646;
+}
+
+.options-number {
+    vertical-align: text-bottom;
+    margin-left: 4px;
+    font-weight: 900;
+}
+
+.emphasized-text {
+    color: rgb(49, 49, 49);
+    font-weight: 700;
+    font-size: 17px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+}
+
+.emphasized-text:hover {
+    color: #225f7a
+}
+
+.small-text {
+    color: rgb(150, 147, 147);
+    font-weight: 300;
+    font-size: 13px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+}
+
+.tweet {
+    padding: 0;
+}
+
+.tweet-footer {
+    padding: 2px 15px;
+}
+
+.tweet-heading {
+    background-color: #fff !important;
+}
+
+.btn-aqua {
+    background-color: #339CC3;
+    color: #fff;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.btn-aqua:hover {
+    color: #fff;
+    background-color: #1688b2;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.dropdown-btn {
+    margin-right: 2%;
+}
+
+.list-header {
+    padding: 6px 0;
+    margin: 6px;
+}
+
+.logo {
+    margin-right: 5%;
+}
+
+.image-sm {
+    width: 32px;
+    height: 32px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.image-md {
+    width: 72px;
+    height: 72px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.aaa {
+    display: block;
+    margin-bottom: -5px;
+}
+
+.btn-emphasize {
+    cursor: pointer;
+}
+
+.dropdown-main {
+    font-size: 14px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.dropdown-main-item {
+    padding: 0 7px;
+}
+
+.dropdown-main-item:hover {
+    background: #1683aa !important;
+}
+
+.profile-username {
+    display: block;
+    font-size: 14px;
+    color: black;
+    font-weight: 900;
+}
+
+.profile-username:hover {
+    color: #fff;
+}
+
+.text-sm {
+    font-size: 12px;
+    color: #8f8d8d !important;
+}
+
+.special-text:hover .profile-username, .special-text:hover .text-sm {
+    color: #fff !important;
+}
+
+
+.cover-image-section {
+    width: 100%;
+}
+
+.cover-image {
+    width: 98%;
+    height: 320px;
+}
+
+.profile-image-section {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin: -115px 0 0 40px;
+    border: 5px solid white;
+    z-index: 5;
+    background: #fff;
+    -ms-border-radius: 12px;
+    border-radius: 12px;
+    -webkit-box-shadow: 0 1px 1px #8899a6;
+    -ms-box-shadow: 0 1px 1px #8899a6;
+    box-shadow: 0 1px 1px #8899a6;
+
+    /*bottom: 230px;*/
+}
+
+.profile-image {
+    width: 100%;
+}
+
+.header-user-info {
+    width: 98%;
+    background-color: #fff;
+    border-bottom: 1px solid #e1e8ed;
+    -moz-box-sizing: border-box;
+    height: 60px;
+    padding-top: 0;
+    /*box-sizing: border-box;*/
+}
+
+.user-specification {
+    /*margin-top: 3px;*/
+    list-style: none;   
+    /*border: 1px solid red;*/
+}
+
+.btn-custom {
+    height: 59px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0; 
+}
+
+.btn-custom:hover {
+    background: transparent;
+    border-bottom: 5px solid #339CC3;
+    -webkit-transition: border-color .3s ease-in-out;
+    -moz-transition: border-color .3s ease-in-out;
+    -ms-transition: border-color .3s ease-in-out;
+    -o-transition: border-color .3s ease-in-out;
+    transition: border-color .3s ease-in-out
+}
+
+.user-specification-numbers {
+    font-weight: 700;
+    color: #339CC3;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+}
+
+.user-specification-text {
+    padding-top: 4px;
+    font-size: 12px;
+}
+
+.user-specification-item {
+    display: inline-block;
+}
+
+.user-specification-button {
+    margin-top: 12px;
+}
+
+.aside-container {
+    padding-left: 0;
+    margin-top: 15px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif
+}
+
+.username-text {
+    color: #9d9d9d;
+    font-size: 14px;
+}
+
+.margin-bottom-off {
+    margin-bottom: 0;
+}
+
+
+
+.right-aside {
+    width: 98%;
+}
+
+.right-aside-heading {
+    height: 45px;
+    font-size: 17px;
+    background: #4986A0;
+    color: #fff;
+}
+
+.text-md-emphasized {
+    font-size: 14px;
+    color: #000;
+    font-weight: 700;
+}
+
+.aside-user-name:hover {
+    color: #225f7a;
+}
+
+.aside-user-name {
+    font-family: Arial,sans-serif;
+}
+
+.aside-username {
+    color: #a0a0a0;
+    font-size: 12px;
+}
+
+.overflow-dots {
+    -moz-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+a:hover {
+    text-decoration: none;   
+}
+
+.btn-extra-sm {
+    margin-top: 3px;
+    padding: 2px 10px;
+    font-size: 14px;
+}
+
+.user-preview-small {
+    margin-bottom: 14px;
+}
+
+.item-inline {
+    display: inline-block;
+}
+
+.item-block {
+    display: block;
+}
+
+.right-aside-body {
+    padding-left: 5px;
+}
+
+.user-preview-info {
+    padding-left: 10px;
+    padding-right: 0;
+}
+
+
+.invisible-div {
+    height: 30px;
+}

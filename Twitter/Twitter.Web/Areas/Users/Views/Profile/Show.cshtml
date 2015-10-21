@@ -1,0 +1,97 @@
+﻿@using Microsoft.AspNet.Identity
+@model Twitter.Web.Areas.Users.Models.ViewModels.UserViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="container">
+    <section class="header-container header-custom">
+        <section class="cover-image-section">
+            <img src="@Url.Content(Model.CoverImageData)" alt="Profile picture" class="cover-image"/>
+        </section>
+        <section class="profile-image-section">
+            <img src="@Url.Content(Model.ProfileImageData)" alt="Profile picture" class="profile-image"/>
+        </section>
+        <section class="panel-body header-user-info">
+            <div class="col-lg-9 col-lg-offset-3">
+                <ul class="user-specification">
+                    <li class="user-specification-item">
+                        <a href="#" class="btn btn-default btn-sm btn-custom">
+                            <div class="user-specification-text">TWEETS</div>
+                            <div class="user-specification-numbers">@Model.TweetsCount</div>
+                        </a>
+                    </li>
+                    <li class="user-specification-item">
+                        <a href="#" class="btn btn-default btn-sm btn-custom">
+                            <div class="user-specification-text">FOLLOWING</div>
+                            <div class="user-specification-numbers">@Model.FollowingCount</div>
+                        </a>
+                    </li>
+                    <li class="user-specification-item">
+                        <a href="#" class="btn btn-default btn-sm btn-custom">
+                            <div class="user-specification-text">FOLLOWERS</div>
+                            <div class="user-specification-numbers">@Model.FollowersCount</div>
+                        </a>
+                    </li>
+                    <li class="user-specification-item">
+                        <a href="#" class="btn btn-default btn-sm btn-custom">
+                            <div class="user-specification-text">FAVORITES</div>
+                            <div class="user-specification-numbers">@Model.FavoriteTweetsCount</div>
+                        </a>
+                    </li>
+                    @if (@HttpContext.Current.User.Identity.Name != @Model.Username)
+                    {
+                        <li class="pull-right user-specification-button">
+                            @if (!@Model.IsFollowed)
+                            {
+                                <a href="#" class="btn btn-default btn-sm">
+                                    +<span class="glyphicon glyphicon-user"></span> Follow
+                                </a>
+                            }
+                            else
+                            {
+                                <a href="#" class="btn btn-default btn-sm follow-option">Following</a>
+                            }
+                        </li>
+                    }
+                </ul>
+            </div>
+        </section>
+    </section>
+    <aside class="container col-lg-3 aside-container">
+        <h4 class="margin-bottom-off">@Model.Name</h4>
+        <p class="username-text">@@@Model.Username</p>
+        @if (Model.Description != null)
+        {
+            <p>@Model.Description</p>
+        }
+
+        <div>
+            <span class="glyphicon glyphicon-user"></span>
+            <span class="emphasized-text">Gender:</span> @Model.Gender
+        </div>
+        @if (Model.PhoneNumber != null)
+        {
+            <div>
+                <span class="glyphicon glyphicon-earphone"></span>
+                <span class="emphasized-text">Phone:</span> @Model.PhoneNumber
+            </div>
+        }
+
+        <div>
+            <span class="glyphicon glyphicon-time"></span>
+            <span class="emphasized-text">Joined:</span> <span class="text-italic"> @Model.JoinedOnFormated</span>
+        </div>
+    </aside>
+    <section class="container col-md-6">
+        @{
+            Html.RenderAction("GetUserTweets", "Tweets", new {area = "Tweets", username = @Model.Username});
+        }
+    </section>
+    <aside class="col-lg-3">
+        @{
+            Html.RenderAction("GetFollowingUsersSuggestions", "Users", new { area = "Users" });
+        }
+    </aside>
+</section>

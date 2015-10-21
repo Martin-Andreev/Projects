@@ -1,0 +1,20 @@
+﻿@model Twitter.Web.Areas.Users.Models.ViewModels.UserMinifiedViewModel
+
+<div class="user-preview-small clearfix">
+    <aside class="pull-left item-inline">
+        <a href="@Url.Action("Show", "Profile", new { area = "Users", Model.Username })" class="aside-user-header">
+            <img src="@Url.Content(Model.ProfileImageData)" alt="Profile picture" class="image-md" />
+        </a>
+    </aside>
+    <section class="col-lg-8 item-inline user-preview-info">
+        <a href="@Url.Action("Show", "Profile", new { area = "Users", Model.Username })" class="aside-user-header">
+            <span class="text-md-emphasized aside-user-name item-block overflow-dots">@Model.Name</span>
+            <span class="aside-username item-block overflow-dots">@@@Model.Username</span>
+        </a>
+        <div user-specification-button>
+            <a href="#" class="btn btn-default btn-sm btn-extra-sm">
+                +<span class="glyphicon glyphicon-user"></span> Follow
+            </a>
+        </div>
+    </section>
+</div>

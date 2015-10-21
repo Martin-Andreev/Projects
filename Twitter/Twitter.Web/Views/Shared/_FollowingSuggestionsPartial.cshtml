@@ -1,0 +1,12 @@
+﻿@using Twitter.Web.Areas.Users.Models.ViewModels
+@model IList<UserMinifiedViewModel>
+
+@if (HttpContext.Current.User != null && HttpContext.Current.User.Identity.IsAuthenticated)
+{
+    <div class="panel right-aside">
+        <div class="panel-heading right-aside-heading">
+            <p>Who to follow?</p>
+        </div>
+        <div class="panel-body right-aside-body">@Html.DisplayFor(m => m)</div>
+    </div>
+}

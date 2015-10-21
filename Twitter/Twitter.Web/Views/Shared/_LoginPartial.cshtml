@@ -1,0 +1,82 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    @*using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+    @Html.AntiForgeryToken()*@
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <div class="col-md-12">
+                <form class="navbar-form list-header" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control input-sm border-radius-md" placeholder="Search..." name="srch-term" id="srch-term">
+                        <div class="input-group-btn">
+                            <button class="border-radius-md btn btn-default btn-sm border-left-transperant left-distance-sm" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </li>
+        <li class="list-header btn-emphasize">
+            <div class="btn-group dropdown-btn btn-header">
+                <img src="~/Content/Images/profile-image.jpg"
+                     class="dropdown-toggle image-sm"
+                     alt="Alternate Text"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false"
+                     title="Profile and settings"/>
+                <ul class="dropdown-menu dropdown-main">
+                    @*<li class="special-text">
+                        <a href="#" class="dropdown-main-item text-sm">
+                            <span class="profile-username">@User.Identity.GetUserName()</span>View Profile
+                        </a>
+                    </li>*@
+                    <li>
+                        <a href="@Url.Action("Show", "Profile", new { area = "Users", username = @User.Identity.GetUserName() })" class="dropdown-main-item text-sm">
+                            <span class="profile-username">@User.Identity.GetUserName()</span>View Profile
+                        </a>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li>
+                        @Html.ActionLink(
+                                 "Edit profile", "Edit", "Profile",
+                                 new { area = "Users", username = @User.Identity.GetUserName() },
+                                 new { @class = "dropdown-main-item"})
+                    </li>
+                    <li>
+                        @Html.ActionLink(
+                            "Change password", "ChangePassword", "Profile",
+                            new { area = "Users"},
+                            new { @class = "dropdown-main-item" })
+                    </li>
+                    <li><a href="#" class="dropdown-main-item">Log out</a></li>
+                </ul>
+            </div>
+        </li>
+        @*<li>
+            @Html.ActionLink("Hello, " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new {title = "Manage"})
+        </li>*@
+        <li class="list-header">
+            <button class="btn btn-sm btn-aqua btn-header">
+                <span class="glyphicon glyphicon-leaf"></span> Tweet
+            </button>
+            @*<input type="button" name="name" value="Tweet" class="btn btn-sm btn-aqua"/>*@
+            @*<div class="form-group has-feedback">
+                <i class="glyphicon glyphicon-leaf form-control-feedback"></i>
+                <input type="button" name="name" value="Tweet" class="btn btn-sm btn-aqua"/>
+            </div>*@
+        </li>
+        @*<li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>*@
+    </ul>
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}
